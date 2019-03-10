@@ -119,7 +119,7 @@ if (functionSelected=="CD/DVD") {
   } else if (valStr == "right") { // Right
       irsend.sendPronto(irRemoteNADAHexCodes[16], 76);
   } else if (valStr == "enter") { // Enter
-      irsend.sendPronto(irRemoteNADAHexCodes[20], 76);
+      irsend.sendPronto(irRemoteNADAHexCodes[9], 76);
   } else if (valStr == "0") { // 0
       irsend.sendPronto(irRemoteNADAHexCodes[21], 76);
   } else if (valStr == "1") { // 1
