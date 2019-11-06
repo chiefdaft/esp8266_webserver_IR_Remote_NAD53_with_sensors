@@ -66,7 +66,7 @@ page += "      <div class='row'>";
 page += "        <div class='col-6 col-sm-5'><form action='/' method='POST'>";
 page += "        <button type='button submit' name='power' value='1' class='btn btn-sm btn-success'>Aan</button>";
 page += "        <button type='button submit' name='power' value='0' class='btn btn-sm btn-danger'>Uit</button>";
-page += "        <a href='#'>Versterker <span class='badge'>";
+page += "        <a href='#'>NAD L53 <span class='badge'>";
 page +=           state;//Aan/Uit
 page += "</span></a>";
 page += "        </form>";
@@ -74,7 +74,7 @@ page += "        </div>";
 page += "        <div class='col-6 col-sm-5'><form action='/' method='POST'>";
 page += "      <button type='button submit' name='function' value='0'  class='btn btn-sm btn-info'>CD/DVD</button>";
 page += "         <button type='button submit' name='function' value='1'  class='btn btn-sm btn-info'>FM</button>";
-page += "        <a href='#'>Geselecteerd <span class='badge'>";
+page += "        <a href='#'>Selected <span class='badge'>";
 page +=           functionSelected;//CD/DVD
 page += "</span></a>";
 page += "        </form>";
@@ -87,11 +87,6 @@ page += "         <button type='button submit' name='dvd' value='2' class='btn b
 page += "        </form></div>";
 page += "         <div class='col-6 col-sm-5'><form action='/' method='POST'>";
 page += "<table>";
-//page += "<tr>";
-//page += "<td><button type='button submit' class='btn btn-sm btn-primary' name='volume' value='4'><span class='glyphicon glyphicon-volume-up'></span></button></td>";
-//page += "<td></td>";
-//page += "<td></td><td></td><td></td><td></td><td></td>";
-//page += "</tr>";
 page += "<tr>";
 page += "<td><button type='button submit' class='btn btn-sm btn-info' name='volume' value='4'><span class='glyphicon glyphicon-volume-up'></span></button></td>";
 page += "<td><button type='button submit' class='btn btn-sm btn-primary' name='volume' value='6'><span class='glyphicon glyphicon-plus'></span></button></td>";
@@ -120,10 +115,6 @@ page += "<td><button type='button submit' class='btn btn-sm btn-info' name='curs
 page += "<td></td>";
 page += "<td></td>";
 page += "</tr>";
-//page += "<tr>";
-//page += "<td><button type='button submit' class='btn btn-sm btn-primary' name='volume' value='3'><span class='glyphicon glyphicon-volume-down'></span></button></td>";
-//page += "<td></td><td></td><td></td><td></td><td></td><td></td>";
-//page += "</tr>";
 page += "</table>";
 page += "    </form></div>";
 page += "    <div class='col-6 col-sm-5'><form action='/' method='POST'>";
