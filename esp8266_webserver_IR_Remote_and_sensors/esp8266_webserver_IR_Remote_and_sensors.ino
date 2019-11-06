@@ -17,9 +17,10 @@
 #define DHTPIN    D4          // DHT Pin - GPIO2
 #define IR_LED D7  // ESP8266 GPIO pin to use. Recommended: 4 (D2). - GPIO13
 
-IRsend irsend(IR_LED);  // Set the GPIO to be used to sending the message.
-const int REPEATVOL = 4; // Number of volume up or down signal repetitions;
-//const uint8_t GPIOPIN[4] = {D5,D6,D7,D8};  // Led
+IRsend irsend(IR_LED);   // Set the GPIO to be used to sending the message.
+const int REPEATVOL = 4; // Number of volume up or down signal repetitions
+                         // changes the volume increase and decrease steps, +1 or -1 step doesn't work well
+
 int repVol = REPEATVOL;
 float   t = 0 ;
 float   h = 0 ;
@@ -211,13 +212,11 @@ void handleRoot(){
 }
 
 void setup() {
-//  for ( int x = 0 ; x < 5 ; x++ ) { 
-//    pinMode(GPIOPIN[x],OUTPUT);
-//  }  
+// Open serial port for debugging purposes  
   irsend.begin();
   Serial.begin ( 115200 );
   
-  // Initialisation du BMP180 / Init BMP180
+  // Init BMP180
   if ( !bmp.begin() ) {
     Serial.println("BMP180 KO!");
     while(1);
@@ -226,7 +225,7 @@ void setup() {
   }
   
   WiFi.begin ( ssid, password );
-  // Attente de la connexion au réseau WiFi / Wait for connection
+  // Wait for WiFi connection
   while ( WiFi.status() != WL_CONNECTED ) {
     delay ( 500 ); Serial.print ( "." );
   }
@@ -235,7 +234,7 @@ void setup() {
   Serial.print ( "Connected to " ); Serial.println ( ssid );
   Serial.print ( "IP address: " ); Serial.println ( WiFi.localIP() );
  
-  // On branche la fonction qui gère la premiere page / link to the function that manage launch page 
+  // Link to the function that manages the launch page 
   server.on ( "/", handleRoot );
  
   server.begin();
