@@ -7,3 +7,6 @@ Necessary hardware ingedredients:
 Optional sensors: 
 * DHT-22 
 * Bosch BMP085
+
+Webpage on the ESP8266:
+![screensshot of webpage on mobile phone](https://www.mcfly.nl/Screenshot_20200517-123118_Chrome.jpg)
