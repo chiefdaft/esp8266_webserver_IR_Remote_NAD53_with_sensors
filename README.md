@@ -9,4 +9,5 @@ Optional sensors:
 * Bosch BMP085
 
 Webpage on the ESP8266:
+
 ![screenshot of webpage on mobile phone](https://www.mcfly.nl/Screenshot_20200517-123118_Chrome_240x494.jpg)
